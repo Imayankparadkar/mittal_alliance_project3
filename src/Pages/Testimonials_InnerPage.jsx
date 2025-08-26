@@ -85,7 +85,7 @@ const testimonialData = [
 
     {
         id: 11,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial13.png",
         name: "Vincent Messelier",
         role: "Ambassador, Arts and Culture Network | Gallery owner",
         review: "Sarthak is a very versatile businessman that has the skills on all technical matter about marketing, SEO, digitalizing, social media, where he combines these skillsto get personnal solutions for his client. And all above and most important, he knows how important in life, is that, connecting to the right people and have personnal meetings are much more important.In life it does not matter what you know, but it is all about 'WHO' you know.",
@@ -94,7 +94,7 @@ const testimonialData = [
 
     {
         id: 12,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial14.png",
         name: "Ruth Owen",
         role: "Founder of The Identity Imperative Movement",
         review: "I recently connected with Sarthak on a networking call, followed by a 1:1, and was truly impressed by his commitment to personal growth and to helping his clients realize their potential. He shared powerful ideas on how I could extend my reach and amplify my message, with a solution-driven, laser-focused approach that was both insightful and practical. Beyond his strategies, what stood out was his genuine care for solving problems and freeing people from limitations so they can create a wider impact. If this is a version of the “circular economy,” I’m all for it—and I highly recommend having a conversation with him, as he is both insightful and highly effective in getting businesses to focus on what truly matters.",
@@ -103,7 +103,7 @@ const testimonialData = [
 
     {
         id: 13,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial15.png",
         name: "Matt Gutierrez",
         role: "Blog & Email Copywriter For Fitness Coaches And Brands| Digital Marketing Expert",
         review: "I've worked with Sarthak the past two years and from that time I learned not only he is a passionate worker but also the hardest worker in the room. He is on track to building his legacy and his footprint in the business world. We are currently business partners and still learning from him. I am interested on seeing him continue to build his future and seeing everyone that looks up to him to follow in his foot steps. Rarley I see someone that works like that and earns his respect. He is definitely someone I can follow into battle with.",
@@ -112,7 +112,7 @@ const testimonialData = [
 
     {
         id: 14,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial16.png",
         name: "Thomas Hansen",
         role: "#1 CHIEF AI GUY | CEO @ AINIRO",
         review: "I've had the pleasure of working together with Sarthak on some podcasts, and he is a great listener, always open for new perspectives, and truly an agile manager and leader. I recommend Sarthak hands down to anyone lucky enough to be able to work with him!",
@@ -121,7 +121,7 @@ const testimonialData = [
 
     {
         id: 15,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial17.png",
         name: "Arka Majumdar",
         role: "UX AND ACCESSIBLE DESIGN | Building intuitive and engaging experiences for 16+ years | AI Enthusiast",
         review: "When i first met Sarthak i saw a guy who has a Hunger to Learn, and now when is see Sarthak Mittal who has become visionary marketing leader whose strategic insights and positive attitude have been instrumental in driving the growth and recognition of Mittal Alliance. I wholeheartedly recommend Sarthak for his expertise and dedication to excellence",
@@ -130,7 +130,7 @@ const testimonialData = [
 
     {
         id: 16,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial18.png",
         name: "Yash Mishra",
         role: "Founder & CEO at Innovait Technologies | IT Consultant | Empowering MSMEs with Cutting-Edge Technology",
         review: "Sarthak Mittal is a visionary leader with exceptional marketing and branding skills. His positive attitude and strategic insights have been invaluable in helping us gain recognition and achieve growth. Under his leadership, Mittal Alliance has significantly elevated our brand. I highly recommend Sarthak for his expertise and commitment to excellence.",
@@ -139,7 +139,7 @@ const testimonialData = [
 
     {
         id: 17,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial9.png",
         name: "Dhiraj Sachdeva",
         role: "Growth Hacker | Digital marketing Agency owner | Community Builder, and Retail Innovator",
         review: "I’ve had the pleasure of witnessing Mr. Sarthak’s exceptional skills in business consulting, where his unique strategies have significantly contributed to business growth. His podcasting talent further amplifies his expertise, making him a valuable asset in the business development space. Highly recommend working with him!",
@@ -148,7 +148,7 @@ const testimonialData = [
 
     {
         id: 18,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial20.png",
         name: "Toufique Umar",
         role: "Business Lead – Toufique Electricals | BCA Student | Learning Cybersecurity & AI | Tech x Business Growth",
         review: "Sarthak was incredibly helpful when I consulted him for my business. He shared valuable advice that helped me improve my ideas and direction. His knowledge and willingness to support startups really stood out. I highly recommend him for his guidance and expertise.",
@@ -157,7 +157,7 @@ const testimonialData = [
 
     {
         id: 19,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial21.png",
         name: "Yashpreeth Nijalinge",
         role: "Founder at So Called CS Engineers(SCCSE)",
         review: "I recently had the distinct pleasure of sharing the podcast with Sarthak and even in the brief interaction , I was impressed with his work and during our conversation, Sarthak had taught me many things and I would say he has a visionary mindset,always thinking one step ahead and to be total it was inspiring and informative",
@@ -166,7 +166,7 @@ const testimonialData = [
 
     {
         id: 20,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial22.png",
         name: "Abhisek Mishra",
         role: "Democratising Coaching with AI-Native Enterprise Platfrom ⚡ Founder at Enablerz || Making Coaching Accessible to Every Employee with Impact at Scale || Ex-Tata Motors, BNP, Ghari || Learner || Explorer || Poet",
         review: "I recently had the pleasure of being hosted by Sarthak Mittal on his podcast, and I am truly amazed by his energy and innovation. At just 21, Sarthak is already leading Mittal Alliance and Badbusiness.in with remarkable vision and determination which is rare at such a young age. Sarthak is not just a leader; he’s a trailblazer. His innovative projects for pets and efforts to prevent ATM robberies demonstrate his commitment to solving real-world problems. His passion for technology and entrepreneurship is contagious, and his work with FFA Animal NGO highlights his compassion and dedication to animal welfare.",
@@ -175,7 +175,7 @@ const testimonialData = [
 
     {
         id: 21,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial23.png",
         name: "Priya Talreja",
         role: "Team Player , Extrovert and Professional with a keen interest in project and product management",
         review: "As I approached Sarthak for us to partner on my current venture not only did he took out the time to get on a call with me but he left with a great insight that is hard to find these days. a great feedback and a great coworker. I am looking forward to partner on more projects and take them to sucess. As a first client of mine Bad Business will always be a mark in my professional journey.",
@@ -184,7 +184,7 @@ const testimonialData = [
 
     {
         id: 22,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial24.png",
         name: "Dr Mohammad Zubair Ahmad",
         role: "20+ Years in Tourism & Hospitality | Director & Professor | Passionate About Entrepreneurship & Societal Impact",
         review: "We are collaborating with BadBusiness, where we support them with business strategy, planning, and client servicing, while they assist us and our clients with technology-related aspects. Sarthak is a dynamic, active, and focused professional, and I sincerely wish him great success in all his endeavours.",
@@ -193,7 +193,7 @@ const testimonialData = [
 
     {
         id: 23,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial25.png",
         name: "Vishal Jain",
         role: "“Founder @ Saarthi AI | Building CollabiFy, Rideo, DOT AI | Helping founders build, connect & grow”",
         review: "I highly recommend Sarthak Mittal. Sarthak has been instrumental in building my brand and fostering a vibrant community among young professionals. His innovative strategies and dedication have greatly contributed to our growth and success. Sarthak’s ability to connect with and engage our target audience sets him apart. He is a valuable asset to any team and will undoubtedly continue to excel in his career.",
@@ -202,7 +202,7 @@ const testimonialData = [
 
     {
         id: 24,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial26.png",
         name: "Akshat Aggarwal",
         role: "Growth Intern at Vedantu | Harvard Aspire Leader Fellow | McKinsey Forward Fellow",
         review: "I recently connected with Sarthak, and I must say he’s one of the most impressive individuals I’ve met. His ability to tackle complex problems with enthusiasm is remarkable—he doesn’t shy away from challenges but dives in headfirst. With an unmatched entrepreneurial spirit, he’s always generating new ideas and looking for opportunities to innovate, yet what sets him apart is that he’s not just a dreamer but a doer. His resilience is unwavering; no matter the setback, he learns, adapts, and comes back stronger. Equally inspiring is his dedication to continuous learning, always seeking new knowledge and skills to push himself to grow and evolve.",
@@ -210,7 +210,7 @@ const testimonialData = [
     },
     {
         id: 25,
-        image: "/Testimonials/testimonial12.png",
+        image: "/Testimonials/testimonial27.png",
         name: "Soham Mandal (Founder and CEO)",
         role: "Co-Founder of DOUM | Innovating Home Services | Empowering Professionals with Opportunities",
         review: "In the tapestry of life, Sarthak Mitta shines as a vibrant thread, weaving boundless creativity with a natural flair for leadership. I first encountered him during a webinar hosted by Inside Community, where his mentoring left a lasting impression on me. His guidance carries a subtle brilliance that inspires a genuine longing for mentorship of his caliber. What truly sets him apart, however, is the humility that crowns his character, making him not just a mentor but a paragon of greatness. To collaborate with Sarthak is to embark on a journey guided by a true luminary—a beacon of inspiration and wisdom.",

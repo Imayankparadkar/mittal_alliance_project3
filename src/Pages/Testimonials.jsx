@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-// Since we don't have access to react-router-dom in this environment,
-// I'm creating a placeholder for the useNavigate hook.
-// In your actual application, you would use `import { useNavigate } from "react-router-dom";`
-const useNavigate = () => {
-    return (path) => console.log(`Navigating to: ${path}`);
-};
-
+// In a real React application, you would import useNavigate like this:
+import { useNavigate } from "react-router-dom";
 
 const Testimonials = () => {
     const testimonialsData = [
@@ -37,22 +32,18 @@ const Testimonials = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    // In your actual project, you would use the real useNavigate hook:
     const navigate = useNavigate();
 
-    // useEffect hook to handle the auto-rotation
     useEffect(() => {
-        // Set up an interval to change the testimonial every 5 seconds
         const intervalId = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
-        }, 5000); // 5000 milliseconds = 5 seconds
-
-        // Clean up the interval when the component unmounts or when currentIndex changes
-        // This prevents memory leaks and resets the timer on manual navigation
+        }, 5000);
         return () => clearInterval(intervalId);
-    }, [currentIndex, testimonialsData.length]); // Dependency array
+    }, [currentIndex, testimonialsData.length]);
 
     const handleRedirect = () => {
-        // This path should match the route for your Testimonials_InnerPage component
+        // This will now navigate to the /testimonials route in your application.
         navigate('/testimonials');
     };
 
@@ -64,7 +55,6 @@ const Testimonials = () => {
                 <h1 className="text-black text-3xl sm:text-4xl font-bold uppercase">
                     Success Stories
                 </h1>
-                 {/* Using a div for the border for better compatibility */}
                  <div className="sm:w-[350px] w-[350px] h-1 sm:h-2 mx-auto mt-2 mb-4 bg-[#D0A151]"></div>
                 <p className="text-xl sm:text-2xl text-black/60">
                     Trusted by Leaders Across Industries
@@ -80,7 +70,6 @@ const Testimonials = () => {
                         src={testimonialsData[currentIndex].avatar}
                         alt="Avatar"
                         className="w-[150px] h-[150px] rounded-full shadow-lg border-4 border-white absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                        // Fallback in case local images don't load in a web environment
                         onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/150x150/CCCCCC/FFFFFF?text=Image+Not+Found'; }}
                     />
                     <div className="bg-[#D0A151] w-full h-full rounded-lg shadow-md flex flex-col justify-end items-center text-center pb-6">
