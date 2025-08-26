@@ -268,7 +268,7 @@ const TestimonialCard = ({ image, name, role, review, review1, isReversed }) => 
 
 const Testimonials_InnerPage = () => {
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-white min-h-screen mt-20">
             <Header />
 
             {/* Decorative Images Section - removed shape styling */}
