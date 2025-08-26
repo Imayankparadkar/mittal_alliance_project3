@@ -305,7 +305,7 @@ const ServiceDetails = () => {
 
   // If the service is found, render the detailed page layout.
   return (
-    <div className=" text-white min-h-screen font-sans">
+    <div className=" text-white min-h-screen font-sans mt-20">
       <Header />
       {/* Common decorative line image */}
       <img
