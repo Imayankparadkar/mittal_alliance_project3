@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+/* Common container */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Left-to-right scroll */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+/* Right-to-left scroll */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 25s linear infinite;
+}
+
+/* In your global CSS file (e.g., index.css) */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* The key change is here */
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content; /* This is crucial for the single track */
+  animation: marquee 40s linear infinite;
+}
