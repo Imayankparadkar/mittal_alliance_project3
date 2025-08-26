@@ -73,7 +73,7 @@ const FrameworkGood = () => {
                         {/* DESKTOP VIEW: Hidden on mobile, visible on sm screens and up */}
                         <div className="hidden sm:block">
                             {/* Polygon Images */}
-                            <div className="flex flex-wrap justify-center gap-8">
+                            <div className="flex flex-wrap justify-center gap-30">
                                 {acquiredBusinesses.map((business) => (
                                     <div
                                         key={business.id}
