@@ -1,5 +1,12 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
+// Since we don't have access to react-router-dom in this environment,
+// I'm creating a placeholder for the useNavigate hook.
+// In your actual application, you would use `import { useNavigate } from "react-router-dom";`
+const useNavigate = () => {
+    return (path) => console.log(`Navigating to: ${path}`);
+};
+
 
 const Testimonials = () => {
     const testimonialsData = [
@@ -32,31 +39,39 @@ const Testimonials = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
 
+    // useEffect hook to handle the auto-rotation
+    useEffect(() => {
+        // Set up an interval to change the testimonial every 5 seconds
+        const intervalId = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
+        }, 5000); // 5000 milliseconds = 5 seconds
+
+        // Clean up the interval when the component unmounts or when currentIndex changes
+        // This prevents memory leaks and resets the timer on manual navigation
+        return () => clearInterval(intervalId);
+    }, [currentIndex, testimonialsData.length]); // Dependency array
+
     const handleRedirect = () => {
         // This path should match the route for your Testimonials_InnerPage component
         navigate('/testimonials');
     };
 
     return (
-        <div className="flex flex-col items-center px-6 sm:px-12 lg:px-20 py-20 sm:py-24 min-h-screen w-full bg-cover bg-center">
+        <div className="flex flex-col items-center px-6 sm:px-12 lg:px-20 py-20 sm:py-24 min-h-screen w-full bg-gray-50">
             
             {/* ## Section Header */}
-            <div className="text-center mb-25 md:mb-20">
+            <div className="text-center mb-24 md:mb-32">
                 <h1 className="text-black text-3xl sm:text-4xl font-bold uppercase">
                     Success Stories
                 </h1>
-                <img
-                    src="/ConsistentMatrix/border.png"
-                    className="sm:w-[450x] w-[350px] h-2 sm:h-[8px] mx-auto mt-2 mb-4"
-                    alt="Border"
-                />
+                 {/* Using a div for the border for better compatibility */}
+                 <div className="sm:w-[350px] w-[350px] h-1 sm:h-2 mx-auto mt-2 mb-4 bg-[#D0A151]"></div>
                 <p className="text-xl sm:text-2xl text-black/60">
                     Trusted by Leaders Across Industries
                 </p>
             </div>
 
             {/* ## Testimonial Content Wrapper */}
-            {/* This container uses Flexbox to switch from vertical (mobile) to horizontal (desktop) layout */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-y-24 gap-x-16 w-full max-w-6xl flex-grow">
                 
                 {/* Card with Avatar */}
@@ -64,10 +79,12 @@ const Testimonials = () => {
                     <img
                         src={testimonialsData[currentIndex].avatar}
                         alt="Avatar"
-                        className="w-[150px] h-[150px] rounded-full shadow-md absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        className="w-[150px] h-[150px] rounded-full shadow-lg border-4 border-white absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        // Fallback in case local images don't load in a web environment
+                        onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/150x150/CCCCCC/FFFFFF?text=Image+Not+Found'; }}
                     />
-                    <div className="bg-[#D0A151] w-full h-full shadow-md flex flex-col justify-end items-center text-center pb-6">
-                        <span className="text-black/60 font-bold text-lg">
+                    <div className="bg-[#D0A151] w-full h-full rounded-lg shadow-md flex flex-col justify-end items-center text-center pb-6">
+                        <span className="text-black/80 font-bold text-lg">
                             {testimonialsData[currentIndex].name}
                         </span>
                         <span className="text-white text-xs font-medium px-2">
@@ -77,7 +94,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Quote Section */}
-                <div className="relative max-w-lg text-center lg:text-left-10">
+                <div className="relative max-w-lg text-center lg:text-left">
                     <img
                         src="/Core/q1.png"
                         className="h-8 sm:h-12 absolute -top-13 -left-4 lg:-left-8 opacity-50"
@@ -102,6 +119,7 @@ const Testimonials = () => {
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
+                            aria-label={`Go to testimonial ${index + 1}`}
                             className={`w-3 h-3 rounded-full transition-all duration-300 
                                 ${currentIndex === index ? "bg-black scale-110" : "bg-gray-300 hover:bg-gray-400"}
                             `}

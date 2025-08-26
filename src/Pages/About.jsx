@@ -20,21 +20,24 @@ const About = () => {
             </div>
 
             {/* ==================================== */}
-            {/* DESKTOP DESIGN              */}
-            {/* (Visible on sm screens and up)    */}
+            {/* DESKTOP DESIGN                       */}
+            {/* (Visible on sm screens and up)       */}
             {/* ==================================== */}
             <div className='relative p-8 h-full hidden sm:block'>
                 <div className='flex flex-col'>
                     <div className='ml-16 z-10'>
                         <div>
-                            <div className='absolute left-36 mt-5 uppercase text-4xl font-[700] text-[#D0A151]'>
+                            {/* MODIFIED THIS DIV FOR CENTERING */}
+                            <div className='absolute left-36 mt-5 uppercase text-5xl font-[700] text-[#D0A151] flex flex-col items-center'>
                                 <h1>About Sarthak mittal</h1>
+                                {/* ADDED A WIDTH CLASS TO MAKE THE IMAGE SMALLER */}
+                                <img src='/About/Underline.png' alt='Not Real Underline' className='mt-2 w-65' />
                             </div>
                             <div className='absolute top-15 left-12 bg-[#E6C58480]/50 h-[100px] rotate-90 w-[200px]'>
                             </div>
                         </div>
                         <div>
-                            <div className='h-full rounded-lg border-2 ml-20 mt-25 w-[1000px]'>
+                            <div className='h-full rounded-lg border-2 ml-20 mt-30 w-[1000px]'>
                                 <ul className='list-disc p-8 uppercase text-justify leading-relaxed'>
                                     <li>
                                         <p>
@@ -85,15 +88,15 @@ const About = () => {
                         <img
                             src='/About/sarthak.png'
                             alt='Sarthak Mittal'
-                            className='h-full w-[320px]'
+                            className='h-full w-[330px]'
                         />
                     </div>
                 </div>
             </div>
 
             {/* =================================== */}
-            {/* MOBILE DESIGN             */}
-            {/* (Visible only on small screens)    */}
+            {/* MOBILE DESIGN                       */}
+            {/* (Visible only on small screens)     */}
             {/* =================================== */}
             <div className='relative h-173 overflow-hidden sm:hidden'>
                 <div className='flex flex-col justify-center text-center'>

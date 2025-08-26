@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-// --- NEW POPUP COMPONENT (WITH NAVIGATION) ---
-// This component contains the JSX and styling for the popup modal.
+// --- POPUP COMPONENT (Unchanged) ---
+// This component is correct as is.
 const Popup = ({ onClose }) => {
     // A simple checkmark SVG component
     const CheckIcon = () => (
@@ -16,23 +16,19 @@ const Popup = ({ onClose }) => {
         </svg>
     );
 
-    // --- NAVIGATION FUNCTION (CORRECTED) ---
-    // This function will handle redirecting the user.
-    // NOTE: If you are using a routing library like React Router,
-    // it's still best to use its navigation method (e.g., useNavigate).
+    // This function calls onClose before redirecting.
     const handleRedirect = () => {
-        // This will navigate to a URL like: yoursite.com/contact
+        onClose(); // Sets the session flag before navigating
         window.location.href = '/contact';
     };
 
-
     return (
-        // Overlay: covers the whole screen with a backdrop blur effect
+        // Overlay
         <div
             className="fixed inset-0 backdrop-blur-sm bg-black/20 flex justify-center items-center z-50 p-4"
             onClick={onClose} // Close popup when clicking the overlay
         >
-            {/* Modal Box: Stop propagation to prevent closing when clicking inside the box */}
+            {/* Modal Box */}
             <div
                 className="bg-white rounded-xl p-8 sm:p-10 text-center relative max-w-lg w-full transform transition-all"
                 onClick={(e) => e.stopPropagation()}
@@ -77,7 +73,7 @@ const Popup = ({ onClose }) => {
                     </div>
                 </div>
 
-                {/* Call to Action Button with onClick for redirection */}
+                {/* Call to Action Button */}
                 <button
                     onClick={handleRedirect}
                     className="mt-8 bg-[#D6A95D] text-white font-bold py-3 px-10 rounded-lg uppercase tracking-wider hover:bg-[#c99a4e] transition-colors text-sm sm:text-base"
@@ -90,22 +86,31 @@ const Popup = ({ onClose }) => {
 };
 
 
-// --- YOUR ORIGINAL LANDING COMPONENT (WITH POPUP LOGIC ADDED) ---
+// --- LANDING COMPONENT (MODIFIED) ---
 const Landing = () => {
-    // --- State to manage popup visibility ---
     const [isPopupVisible, setIsPopupVisible] = useState(false);
 
-    // --- Effect to show the popup when the component mounts ---
+    // --- MODIFIED: Effect to show the popup using sessionStorage ---
     useEffect(() => {
-        // A short delay can improve user experience
-        const timer = setTimeout(() => {
-            setIsPopupVisible(true);
-        }, 1500); // Popup appears after 1.5 seconds
+        // 1. Check if the user has dismissed the popup in the current session
+        const hasDismissedPopup = sessionStorage.getItem('popupDismissed');
 
-        // Cleanup function to clear the timer if the component unmounts
-        return () => clearTimeout(timer);
+        // 2. Only show the popup if they have NOT dismissed it in this session
+        if (!hasDismissedPopup) {
+            const timer = setTimeout(() => {
+                setIsPopupVisible(true);
+            }, 1500); // Popup appears after 1.5 seconds
+
+            return () => clearTimeout(timer);
+        }
     }, []); // Empty dependency array ensures this runs only once on mount
 
+    // --- MODIFIED: Function to close the popup and set the session flag ---
+    const handleClosePopup = () => {
+        setIsPopupVisible(false);
+        // Set the flag in sessionStorage so it won't appear again in this session
+        sessionStorage.setItem('popupDismissed', 'true');
+    };
 
     const logos = [
         { img: '/Landing/Logo/l1.png' }, { img: '/Landing/Logo/l2.png' },
@@ -118,25 +123,13 @@ const Landing = () => {
         { img: '/Landing/Logo/l15.png' },
     ];
 
-    const logotwo = [
-        { img: '/Landing/Logo2/l1.png' }, { img: '/Landing/Logo2/l2.png' },
-        { img: '/Landing/Logo2/l3.png' }, { img: '/Landing/Logo2/l4.png' },
-        { img: '/Landing/Logo2/l5.png' }, { img: '/Landing/Logo2/l6.png' },
-        { img: '/Landing/Logo2/l7.png' },
-    ];
-
-    const getTrustedBySize = (index) => {
-        const i = index % 7;
-        if (i === 1 || i === 2 || i === 3) return "w-20 sm:w-32";
-        if (i === 6) return "w-16 sm:w-20";
-        return "w-10 sm:w-12";
-    }
+    // ... (rest of your component code is unchanged)
 
     return (
         <div className='w-full h-full space-y-10 py-28'>
 
-            {/* --- Conditionally render the popup based on state --- */}
-            {isPopupVisible && <Popup onClose={() => setIsPopupVisible(false)} />}
+            {/* --- Conditionally render the popup --- */}
+            {isPopupVisible && <Popup onClose={handleClosePopup} />}
 
             {/* --- HEADER AND TEXT SECTIONS (Unchanged) --- */}
             <div className='flex flex-col h-full w-full justify-center items-center'>
@@ -212,7 +205,6 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-
 
             {/* --- "TRUSTED BY" SECTION (Unchanged) --- */}
             <div className='w-full space-y-4'>

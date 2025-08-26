@@ -209,7 +209,7 @@ const GreatTogether = () => {
 
                             {/* --- This section is now conditionally rendered only in the initial view to avoid duplication --- */}
                              {!showMeaning && (
-                                <div className="flex flex-col items-center mt-12">
+                                <div className="flex flex-col items-center mt-12 mb-15">
                                     <img
                                         src="/Together/pc.png"
                                         className="w-full max-w-lg"
@@ -284,6 +284,12 @@ const GreatTogether = () => {
                     </div>
                 </div>
             </div>
+            <img
+                src="/ConsistentMatrix/Divider.png"
+                className="absolute z-10 bottom-0  left-1/2 -translate-x-1/2 -mb-1 "
+                alt="Divider"
+                onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/600x10/D0A151/1a202c?text=+'; }}
+            />
         </div>
     );
 };

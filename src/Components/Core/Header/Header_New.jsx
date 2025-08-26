@@ -90,14 +90,23 @@ const Header_New = () => {
             {isOpen && (
                 <div className="md:hidden fixed inset-0 z-50 bg-[#0E0E0E] flex flex-col items-center justify-center py-6">
                     <div className="absolute top-6 right-6">
-                         <button onClick={() => setIsOpen(false)}>
+                        <button onClick={() => setIsOpen(false)}>
                             <X className="text-white w-8 h-8" />
                         </button>
                     </div>
 
+                    {/* Logo in Mobile Menu - ADDED THIS SECTION */}
+                    <Link to="/" style={{ textDecoration: 'none' }} onClick={() => setIsOpen(false)}>
+                        <img
+                            src="/images/logo.png"
+                            alt="logo"
+                            className="w-[200px] h-auto" // Adjusted size for mobile menu
+                        />
+                    </Link>
+
                     {/* Mobile Navigation */}
-                    <nav className="flex flex-col items-center space-y-8 text-white text-xl font-semibold">
-                         {navLinks.map((link) => (
+                    <nav className="flex flex-col items-center space-y-6 text-white text-lg font-semibold">
+                        {navLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 to={link.href}
@@ -107,13 +116,13 @@ const Header_New = () => {
                             >
                                 {link.label}
                                 {location.pathname === link.href && (
-                                     <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-[#CE9D4B]"></span>
+                                    <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-[#CE9D4B]"></span>
                                 )}
                             </Link>
                         ))}
                     </nav>
 
-                    <div className="mt-12">
+                    <div className="mt-8">
                         <Link to="/contact" style={{ textDecoration: 'none' }} onClick={() => setIsOpen(false)}>
                             <div className="relative w-[300px] h-15 cursor-pointer">
                                 <svg

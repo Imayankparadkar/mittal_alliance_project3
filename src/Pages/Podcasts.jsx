@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../Components/Core/Header/Header_New";
+import Header from '../Components/Core/Header/Header_New';
 import { blogPosts } from "../data/podcastData";
 // --- 1. IMPORT THE NEW DEPENDENCIES ---
 import CountUp from "react-countup";

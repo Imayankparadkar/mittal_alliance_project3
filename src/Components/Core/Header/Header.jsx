@@ -95,7 +95,7 @@ const Header = () => {
 
             {/* --- Mobile Menu Overlay --- */}
             {isOpen && (
-                <div className="md:hidden fixed inset-0 z-[49] bg-[#0E0E0E] flex flex-col items-center justify-start pt-24 py-6">
+                <div className="md:hidden fixed inset-0 z-[49] bg-[#0E0E0E] flex flex-col items-center justify-start  py-6">
                      {/* The z-index is lowered slightly so the header's close button can be on top */}
                     <div className="flex justify-between items-center w-full px-6 absolute top-0 left-0 h-16">
                          {/* This div is now just for positioning the close button */}
@@ -106,6 +106,15 @@ const Header = () => {
                             <X className="text-white w-7 h-7" />
                         </button>
                     </div>
+
+                    {/* Logo in Mobile Menu - ADDED THIS SECTION */}
+                    <Link to="/" style={{ textDecoration: 'none' }} onClick={() => setIsOpen(false)}>
+                        <img
+                            src="/images/logo.png"
+                            alt="logo"
+                            className="w-[200px] h-auto "
+                        />
+                    </Link>
 
                     {/* Mobile Navigation (conditional on home page) */}
                     {isHome && (

@@ -64,7 +64,7 @@ const FAQs = () => {
                 </div>
 
                 {/* --- FAQ Grid --- */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 items-start">
                     {faqData.map((faq) => (
                         <div key={faq.id} className="bg-[#FFF4E1] rounded-lg transition-transform duration-300 ease-in-out hover:shadow-lg cursor-pointer" onClick={(e) => handleToggle(e, faq.id)}>
                             <div className="flex justify-between items-center p-4">
