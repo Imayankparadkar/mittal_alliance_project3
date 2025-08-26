@@ -139,7 +139,7 @@ const testimonialData = [
 
     {
         id: 17,
-        image: "/Testimonials/testimonial9.png",
+        image: "/Testimonials/testimonial19.png",
         name: "Dhiraj Sachdeva",
         role: "Growth Hacker | Digital marketing Agency owner | Community Builder, and Retail Innovator",
         review: "I’ve had the pleasure of witnessing Mr. Sarthak’s exceptional skills in business consulting, where his unique strategies have significantly contributed to business growth. His podcasting talent further amplifies his expertise, making him a valuable asset in the business development space. Highly recommend working with him!",
