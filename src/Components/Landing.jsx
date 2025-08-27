@@ -43,18 +43,18 @@ const Popup = ({ onClose }) => {
                 </button>
 
                 {/* Main Heading */}
-                <h2 className="text-black font-extrabold text-3xl sm:text-4xl uppercase tracking-wide">
-                    Book a Free Session
+                <h2 className="text-black font-extrabold text-3xl sm:text-3xl uppercase tracking-wide">
+                    Book a Free Interactions Call
                 </h2>
 
                 {/* Subheading */}
                 <p className="text-slate-800 font-semibold text-lg sm:text-xl uppercase mt-1 tracking-wider">
-                    With Our Branding Expert
+                    {/* With Our Branding Expert */}
                 </p>
 
                 {/* Description */}
                 <p className="text-gray-600 mt-4 text-sm sm:text-base">
-                    Transform your personal brand with our expert guidance. Get personalized strategies to build influence and credibility in the digital world.
+                It’s not about business, it’s about creating a meaningful connection. Let’s connect and build a strong relationship.
                 </p>
 
                 {/* Features List */}
