@@ -1,24 +1,35 @@
 import React from "react";
 
 const ResultConsistent = () => {
-    // ✅ Array of Inner Images (Using placeholders for demonstration)
+    // ✅ Array updated with 'link' property for redirection
     const acquiredBusinesses = [
-        { id: 1, image: "/ConsistentMatrix/l1.png" },
-        { id: 2, image: "/ConsistentMatrix/l2.png" },
-        { id: 3, image: "/ConsistentMatrix/l3.png" },
-        { id: 4, image: "/ConsistentMatrix/l4.png" },
+        {
+            id: 1,
+            image: "/ConsistentMatrix/l1.png",
+            link: "https://mittalalliance.com/",
+        },
+        {
+            id: 2,
+            image: "/ConsistentMatrix/l2.png",
+            link: "https://mittalbrandtech.com/",
+        },
+        { id: 3, image: "/ConsistentMatrix/l3.png", link: "https://badverse.in/" },
+        {
+            id: 4,
+            image: "/ConsistentMatrix/l4.png",
+            link: "https://www.meesho.com/Anjuscreation?ms=2", // Corrected the duplicated URL
+        },
     ];
 
     return (
         <div
             className="flex flex-col items-center px-4 sm:px-20 py-12 w-full min-h-screen bg-cover bg-center relative font-sans"
             style={{
-                // Using a dark background for better contrast
                 backgroundImage: "url('/ConsistentMatrix/bg.png')",
                 backgroundColor: '#1a202c'
             }}
         >
-            {/* Dark Overlay - Increased opacity for better content visibility */}
+            {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/75"></div>
 
             {/* Main content container */}
@@ -49,28 +60,35 @@ const ResultConsistent = () => {
                 {/* Logos Container */}
                 <div className="w-full flex justify-center items-center gap-6 sm:gap-8 flex-wrap mt-10 sm:mt-20">
                     {acquiredBusinesses.map((business) => (
-                        <div
+                        // ✅ Wrapped the div with an anchor tag for redirection
+                        <a
                             key={business.id}
-                            className="relative w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] transition-transform duration-300 ease-in-out hover:scale-110 hover:-translate-y-2 cursor-pointer group"
+                            href={business.link}
+                            target="_blank" // Opens the link in a new tab
+                            rel="noopener noreferrer" // Recommended for security
                         >
-                            {/* Polygon Background */}
-                            <img
-                                src="/ConsistentMatrix/Polygon.png"
-                                className="w-full h-full"
-                                alt="Polygon Background"
-                                onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/200x200/1a202c/D0A151?text=+'; }}
-                            />
-
-                            {/* Business Logo */}
-                            <div className="absolute inset-0 flex justify-center items-center p-8">
+                            <div
+                                className="relative w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] transition-transform duration-300 ease-in-out hover:scale-110 hover:-translate-y-2 cursor-pointer group"
+                            >
+                                {/* Polygon Background */}
                                 <img
-                                    src={business.image}
-                                    className="h-auto max-h-[100px] w-auto max-w-[100px] object-contain rounded-2xl"
-                                    alt={`Business ${business.id}`}
-                                    onError={(e) => { e.target.onerror = null; e.target.src=`https://placehold.co/100x100/2d3748/ffffff?text=Logo+${business.id}`; }}
+                                    src="/ConsistentMatrix/Polygon.png"
+                                    className="w-full h-full"
+                                    alt="Polygon Background"
+                                    onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/200x200/1a202c/D0A151?text=+'; }}
                                 />
+
+                                {/* Business Logo */}
+                                <div className="absolute inset-0 flex justify-center items-center p-8">
+                                    <img
+                                        src={business.image}
+                                        className="h-auto max-h-[100px] w-auto max-w-[100px] object-contain rounded-2xl"
+                                        alt={`Business ${business.id}`}
+                                        onError={(e) => { e.target.onerror = null; e.target.src=`https://placehold.co/100x100/2d3748/ffffff?text=Logo+${business.id}`; }}
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
 
@@ -81,11 +99,10 @@ const ResultConsistent = () => {
                 </div>
             </div>
 
-            {/* ✅ Divider Image - MOVED AND RE-STYLED */}
-            {/* Now positioned absolutely relative to the main container */}
+            {/* Divider Image */}
             <img
                 src="/ConsistentMatrix/Divider.png"
-                className="absolute z-10 bottom-0  left-1/2 -translate-x-1/2 -mb-1"
+                className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 -mb-1"
                 alt="Divider"
                 onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/600x10/D0A151/1a202c?text=+'; }}
             />

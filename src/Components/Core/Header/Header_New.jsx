@@ -8,6 +8,7 @@ const Header_New = () => {
 
     // Centralize navigation links for easier management
     const navLinks = [
+        { href: "/", label: "Home" },
         { href: "/blogs", label: "Blogs" },
         { href: "/events", label: "Events" },
         { href: "/podcasts", label: "Podcasts" },

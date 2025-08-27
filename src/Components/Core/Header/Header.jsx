@@ -60,6 +60,7 @@ const Header = () => {
                 {/* Desktop Navigation (conditional on home page) */}
                 {isHome && (
                     <nav className="hidden md:flex items-center cursor-pointer space-x-14 text-white/80 font-medium">
+                        <Link to="/" style={{ textDecoration: 'none' }} className="text-white hover:text-white" onClick={() => setIsOpen(false)}>Home</Link>
                         <Link to="/blogs" style={{ textDecoration: 'none' }} className="text-white/80 hover:text-white">Blogs</Link>
                         <Link to="/events" style={{ textDecoration: 'none' }} className="text-white/80 hover:text-white">Events</Link>
                         <Link to="/podcasts" style={{ textDecoration: 'none' }} className="text-white/80 hover:text-white">Podcasts</Link>
@@ -119,6 +120,7 @@ const Header = () => {
                     {/* Mobile Navigation (conditional on home page) */}
                     {isHome && (
                         <nav className="flex flex-col items-center space-y-6 text-white text-lg font-semibold">
+                            <Link to="/" style={{ textDecoration: 'none' }} className="text-white hover:text-white" onClick={() => setIsOpen(false)}>Home</Link>
                             <Link to="/blogs" style={{ textDecoration: 'none' }} className="text-white hover:text-white" onClick={() => setIsOpen(false)}>Blogs</Link>
                             <Link to="/events" style={{ textDecoration: 'none' }} className="text-white hover:text-white" onClick={() => setIsOpen(false)}>Events</Link>
                             <Link to="/podcasts" style={{ textDecoration: 'none' }} className="text-white hover:text-white" onClick={() => setIsOpen(false)}>Podcasts</Link>

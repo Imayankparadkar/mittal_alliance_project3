@@ -63,7 +63,7 @@ const FrameworkGood = () => {
                     <div>
                         <img
                             src="/ConsistentMatrix/border.png"
-                            className="sm:w-[1230px] w-full mt-2"
+                            className="sm:w-[1230px] w-full mt-2 mx-auto "
                             alt="Border"
                         />
                     </div>

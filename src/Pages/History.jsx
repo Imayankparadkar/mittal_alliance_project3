@@ -152,11 +152,6 @@ const History = () => {
                                 </div>
                             ))}
                         </div>
-                         <div className="mt-8 text-center">
-                            <a href="#journey" className="inline-block px-8 py-3 sm:px-10 border-2 border-amber-400 text-amber-400 rounded-full hover:bg-amber-400 hover:text-black transition-all duration-300 font-semibold tracking-wider text-sm sm:text-base">
-                                VIEW ENTIRE JOURNEY
-                            </a>
-                        </div>
                     </div>
                 </div>
 

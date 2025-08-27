@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const PodcastCard = () => {
     const [podcasts] = useState([
         {
-            image: "/Core/Gradient.png",
+            image: "/Blog/blog 8.png",
             name: "John Doe",
             date: "2025-07-15",
             podcastTitle: "Building Startups That Last",
@@ -12,7 +12,7 @@ const PodcastCard = () => {
             podcastLink: "#",
         },
         {
-            image: "/Core/Gradient.png",
+            image: "/Blog/blog 6.png",
             name: "Priya Sharma",
             date: "2025-07-10",
             podcastTitle: "Leadership in the Digital Age",
@@ -21,7 +21,7 @@ const PodcastCard = () => {
             podcastLink: "#",
         },
         {
-            image: "/Core/Gradient.png",
+            image: "/Blog/blog 10.png",
             name: "Arjun Mehta",
             date: "2025-06-28",
             podcastTitle: "The Art of Effective Communication",

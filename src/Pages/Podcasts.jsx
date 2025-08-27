@@ -32,8 +32,8 @@ const PodcastCard = ({ id, imgSrc, title, description, host, date }) => (
           {host}
         </span>
         <span className="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
           {date}
         </span>
@@ -89,10 +89,10 @@ const AnimatedStat = ({ value }) => {
 
 const Podcasts = () => {
   const stats = [
-    { value: "1.3M+", label: "ACROSS SOCIAL" },
-    { value: "5M+", label: "MONTHLY REACH" },
-    { value: "50+", label: "COUNTRIES ENGAGE" },
-    { value: "60+", label: "IMPACTFUL VIDEOS" },
+    { value: "3.6K+", label: "ACROSS SOCIAL" },
+    { value: "15M+", label: "LINKEDIN IMPRESSIONS" },
+    { value: "10+", label: "COUNTRIES ENGAGE" },
+    { value: "32000+", label: "LINKEDIN FOLLOWERS" },
   ];
 
   return (
@@ -144,7 +144,7 @@ const Podcasts = () => {
             </p>
 
             <div className="mt-4 md:mt-6 flex flex-col items-start gap-4 md:gap-6">
-              {/* --- YOUTUBE LINK MODIFIED HERE --- */}
+              {/* --- YOUTUBE LINK --- */}
               <a
                 href="https://www.youtube.com/@mittalspeaks/videos"
                 target="_blank"
@@ -158,9 +158,15 @@ const Podcasts = () => {
                 />
                 <span className="text-xl md:text-3xl font-bold">YouTube</span>
               </a>
-              <button className="border-2 border-[rgba(208,161,81,1)] text-[rgba(208,161,81,1)] font-bold py-2 px-4 md:py-3 md:px-8 text-sm md:text-base rounded-full hover:bg-[rgba(208,161,81,1)] hover:text-white transition-colors duration-300">
+              {/* --- MODIFIED BUTTON --- */}
+              <a
+                href="https://calendar.app.google/HRCNH5eECSNPr8tC7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-[rgba(208,161,81,1)] text-[rgba(208,161,81,1)] font-bold py-2 px-4 md:py-3 md:px-8 text-sm md:text-base rounded-full hover:bg-[rgba(208,161,81,1)] hover:text-white transition-colors duration-300 inline-block"
+              >
                 JOIN FOR A PODCAST
-              </button>
+              </a>
             </div>
           </div>
         </section>

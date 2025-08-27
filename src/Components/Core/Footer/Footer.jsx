@@ -1,12 +1,34 @@
 import React from "react";
-import { MessageSquareText } from "lucide-react";
+import { ArrowUp } from "lucide-react"; // ✨ 1. Import the ArrowUp icon
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const pages = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Blog Insight", path: "/blogs" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const companyLinks = [{ name: "Careers", path: "/careers" }];
+
+  // ✨ 2. Create a function to handle scrolling to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // for a smooth scrolling animation
+    });
+  };
+
   return (
     <footer className="bg-black text-white py-10 px-4 sm:px-20 relative">
       <div className="absolute top-5 right-5 sm:top-10 sm:right-10">
-        <div className="bg-[#D0A151] rounded-lg w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-105 transition">
-          <MessageSquareText className="text-black " />
+        {/* ✨ 3. Add the onClick event and swap the icon */}
+        <div
+          className="bg-[#D0A151] rounded-lg w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-105 transition"
+          onClick={scrollToTop} // Add the click handler here
+        >
+          <ArrowUp className="text-black" /> {/* Use the new icon */}
         </div>
       </div>
 
@@ -22,8 +44,7 @@ const Footer = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {/* SVG paths remain the same */}
-                 <g clipPath="url(#clip0_376_2845)">
+                <g clipPath="url(#clip0_376_2845)">
                   <path
                     d="M20 23.332C25.5228 23.332 30 18.8549 30 13.332C30 7.80918 25.5228 3.33203 20 3.33203C14.4772 3.33203 10 7.80918 10 13.332C10 18.8549 14.4772 23.332 20 23.332Z"
                     stroke="#D0A151"
@@ -57,36 +78,27 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Wrapper for Pages and Company to control mobile layout */}
+        {/* Wrapper for Pages and Company */}
         <div className="grid grid-cols-2 gap-8 md:contents">
           {/* Pages Section */}
-          {/* ✨ MODIFICATION: Added text-center for mobile, text-left for desktop */}
           <div className="text-center md:text-left">
             <h3 className="text-lg font-bold mb-4">Pages</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
-              {[
-                "Home",
-                "Services",
-                "Courses",
-                "Blog Insight",
-                "Contact",
-                "Term & Condition",
-              ].map((page, i) => (
+              {pages.map((page, i) => (
                 <li key={i} className="hover:text-[#CC9A48] cursor-pointer">
-                  {page}
+                  <Link to={page.path}>{page.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Company Section */}
-          {/* ✨ MODIFICATION: Added text-center for mobile, text-left for desktop */}
           <div className="text-center md:text-left">
             <h3 className="text-lg font-bold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
-              {["Careers", "Support", "Price & Plans"].map((company, i) => (
+              {companyLinks.map((link, i) => (
                 <li key={i} className="hover:text-[#CC9A48] cursor-pointer">
-                  {company}
+                  <Link to={link.path}>{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -113,7 +125,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Improved responsive layout for the copyright section */}
+      {/* Copyright Section */}
       <div className="border-t border-gray-700 mt-10 pt-5 flex flex-col sm:flex-row sm:justify-between items-center gap-4">
         <p className="text-[10px] sm:text-sm text-gray-300 text-center sm:text-left">
           Copyright By ©{" "}

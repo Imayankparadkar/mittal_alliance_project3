@@ -53,9 +53,9 @@ const allServicesData = [
     subtitle: "Empowering Growth Through Smart Integration",
     description:
       "In today’s brand-driven economy, combining creative branding with cutting-edge technology isn’t just an advantage – it’s a necessity. We help you bridge the gap between vision and execution by integrating intelligent BrandTech (Brand Technology) solutions tailored to amplify your brand presence and achieve your business objectives.",
-    secondaryTitle: "Marketing Technology Strategy",
+    secondaryTitle: "BrandTech Consulting",
     secondaryDescription:
-      "Reimagine your brand with the power of technology. Our BrandTech solutions combine creative branding with cutting-edge digital tools—ensuring your business stands out, stays relevant, and builds lasting emotional connections with your audience",
+      "Reimagine your brand with the power of technology. Our BrandTech solutions combine creative branding with cutting-edge digital tools—ensuring your business stands out, stays relevant, and builds lasting emotional connections with your audience.",
     imageUrl: "/Services/service2.png",
     whatWeOffer: [
       {
@@ -291,6 +291,11 @@ const ServiceDetails = () => {
   // Find the service data that matches the ID from the URL
   const service = allServicesData.find((s) => s.id === parseInt(id));
 
+  // Function to handle the redirect when the button is clicked.
+  const handleRedirect = () => {
+    window.open("https://calendar.app.google/HRCNH5eECSNPr8tC7", "_blank");
+  };
+
   // If no service with that ID is found, display an error message.
   if (!service) {
     return (
@@ -363,7 +368,6 @@ const ServiceDetails = () => {
 
           {/* Left-Aligned Main Content */}
           <div className="text-left">
-
             <h2 className="text-2xl font-bold uppercase text-black">
               {service.secondaryTitle}
             </h2>
@@ -405,9 +409,14 @@ const ServiceDetails = () => {
                 <p className="text-xl text-black">₹ {service.pricing.amount}</p>
               </div>
 
-              <button className="bg-[black] text-white font-bold py-3 px-10 rounded-lg mt-6 text-lg">
+              <button
+                onClick={handleRedirect}
+                className="bg-[black] text-white font-bold py-3 px-10 rounded-lg mt-6 text-lg
+                           transition-all duration-200 ease-in-out hover:scale-105 active:scale-95" // Added animation classes
+              >
                 GET A CUSTOM QUOTE
               </button>
+
               <p className="text-gray-500 text-base mt-4">
                 {service.pricing.note}
               </p>

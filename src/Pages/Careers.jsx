@@ -52,9 +52,11 @@ const Careers = () => {
                         As a part of our team, you'll work alongside industry experts and thought leaders, contribute to breakthrough projects, and participate in initiatives aimed at transforming industries. We are dedicated to fostering a collaborative culture where every voice is valued and every contribution counts. Explore the possibilities with Mittal Alliance and take the next step in your career journey.
                     </p>
                     
-                    {/* Button */}
+                    {/* Button -- MODIFIED HERE */}
                     <a
-                        href="#"
+                        href="https://mittalalliance.com/career/"
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="mt-8 inline-block bg-[#D0A151] text-white font-bold px-8 py-3 hover:bg-opacity-90 transition-colors"
                     >
                         EXPLORE CAREER OPPORTUNITIES
