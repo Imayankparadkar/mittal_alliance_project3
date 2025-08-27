@@ -44,7 +44,7 @@ const Popup = ({ onClose }) => {
 
                 {/* Main Heading */}
                 <h2 className="text-black font-extrabold text-3xl sm:text-3xl uppercase tracking-wide">
-                    Book a Free Interactions Call
+                BOOK A FREE NETWORKING CALL !
                 </h2>
 
                 {/* Subheading */}
