@@ -1,26 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom"; // <-- 1. Import Link
 import PodcastCard from "../Components/PodcastCard";
 
 const Blog = () => {
     return (
         <>
-
             <div className="relative sm:px-center w-full bg-cover bg-center py-16 mb-10">
                 <div>
-                    <img src="/Core/Divider.png"
+                    <img
+                        src="/Core/Divider.png"
                         className="absolute top-0 w-full"
+                        alt="Divider"
                     />
                 </div>
 
-                <br/>
+                <br />
                 <div className="text-center max-w-2xl mx-auto ">
-
                     <div>
                         <span className="bg-[#FF800033] px-6 py-2 rounded-full font-semibold text-[#FDAA56] text-sm uppercase">
                             Latest Insights
                         </span>
                     </div>
-
 
                     <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#D0A151] to-[#D0A151] mt-6 text-3xl sm:text-[40px] font-bold uppercase">
                         My Blogs & Insights
@@ -43,13 +43,17 @@ const Blog = () => {
                 </section>
 
                 <section className="w-full flex justify-center text-sm font-semibold items-center">
-                    <button className="border border-[#FDAA56] cursor-pointer text-[#FDAA56] py-2 px-4 rounded-full">
+                    {/* --- MODIFIED SECTION START --- */}
+                    <Link
+                        to="/blogs"
+                        className="border border-[#FDAA56] cursor-pointer text-[#FDAA56] py-2 px-4 rounded-full hover:bg-[#FDAA56] hover:text-black transition-colors duration-300"
+                    >
                         Visit My Blog and Learn More About Entrepreneurship
-                    </button>
+                    </Link>
+                    {/* --- MODIFIED SECTION END --- */}
                 </section>
 
-                <div className="bg-black  sm:py-1 px-4 sm:px-10 gap-6 absolute sm:mt-0 mt-4 right-0 mb-2 w-fit flex items-center justify-between ">
-
+                <div className="bg-black sm:py-1 px-4 sm:px-10 gap-6 absolute sm:mt-0 mt-4 right-0 mb-2 w-fit flex items-center justify-between ">
                     <img
                         src="/Blogs/Founder.png"
                         alt="Founder"
@@ -65,8 +69,6 @@ const Blog = () => {
                         </span>
                     </div>
                 </div>
-
-
             </div>
         </>
     );
