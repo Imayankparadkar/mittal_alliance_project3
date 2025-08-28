@@ -67,10 +67,10 @@ const Popup = ({ onClose }) => {
                         <CheckIcon />
                         <span>Brand audit</span>
                     </div>
-                    <div className="flex items-center justify-center">
+                    {/* <div className="flex items-center justify-center">
                         <CheckIcon />
                         <span>Strategy roadmap</span>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Call to Action Button */}
