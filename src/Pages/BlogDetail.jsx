@@ -73,7 +73,7 @@ const BlogDetail = () => {
 
   // Render the blog post details if found.
   return (
-    <div className="bg-white">
+    <div className="bg-white mt-26">
       <Header />
       {/* Line divider image */}
       <img src="/Blog/line.png" alt="divider" className="w-full block" />
