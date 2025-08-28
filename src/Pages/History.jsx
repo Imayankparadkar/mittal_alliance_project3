@@ -221,18 +221,6 @@ const History = () => {
                         <p>During his time at NMIMS, Sarthak joined the Microsoft Learn Student Ambassadors community, where he expanded his network globally. He founded a C++ WhatsApp community, quickly growing it to over 1,000 members, which led to the creation of MentorMenti, a platform connecting students with mentors.</p>
                         <p className="mt-4">Although MentorMenti closed after eight months due to disagreements within the founding team, it taught Sarthak crucial lessons in team dynamics and startup management.</p>
                     </div>
-
-                    <div>
-                        <h4 className="text-2xl font-semibold mb-3">Leadership at Worldplay Ventures and New Business Ventures (2024)</h4>
-                        <p>In 2024, Sarthak took on a prominent role as CEO of Worldplay Ventures, a U.S.-based incubator, marking his entry into the global business sphere. He also joined Ganesh Industries as CTO to modernize their IT operations, connecting his technical expertise with his family's legacy in manufacturing.</p>
-                        <p className="mt-4">He revived Mittal Alliance as Bad Business, a platform aimed at helping startups solve operational challenges. Collaborating with mentors like Siddhant from Advise International Global, Sarthak co-authored a book on sales strategy, gaining credibility and recognition in his local community.</p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-2xl font-semibold mb-3">Collaborating with NextGen Branding and Mentorship Programs (2024)</h4>
-                        <p>Sarthak collaborated with Palak, CEO of NextGen Branding, on a mentorship program that supported individuals in building their online presence. Through this program, he strengthened his own brand, becoming a well-known figure in local business circles.</p>
-                        <p className="mt-4">Sarthak’s journey from Choithram School to NMIMS Indore reflects his determination to create success on his own terms, bridging academia and industry through initiatives like BadTalks and Bad Business.</p>
-                    </div>
                 </div>
 
                 <hr className="border-t-2 border-[rgba(194,124,6,1)] my-12 md:my-12" />
