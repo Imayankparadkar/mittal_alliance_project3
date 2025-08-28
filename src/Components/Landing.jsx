@@ -61,7 +61,7 @@ const Popup = ({ onClose }) => {
                 <div className="mt-6 space-y-2 sm:space-y-0 sm:flex sm:justify-around sm:items-center text-gray-800 font-medium">
                     <div className="flex items-center justify-center">
                         <CheckIcon />
-                        <span>30-minute consultation</span>
+                        <span>30-minute business audit</span>
                     </div>
                     <div className="flex items-center justify-center">
                         <CheckIcon />
