@@ -26,7 +26,7 @@ const mentorProfiles = [
   },
   {
     id: "mentor5",
-    image: "/Mentor/mentor7.png",
+    image: "/Mentor/Sarthak.jpg",
     description: `Sarthak Mittal, a visionary entrepreneur and the founder of Mittal Alliance, embodies the spirit of innovation and collaboration at the heart of this dynamic network. As a sixth-generation member of the esteemed Mittal family, Sarthak leverages his rich heritage to foster a diverse ecosystem of companies dedicated to providing comprehensive outsourcing solutions. His leadership journey is marked by significant roles, including CEO of Worldplay Ventures and CTO of Ganesh Industries, where he has demonstrated a commitment to modernizing operations and embracing technological advancements. Sarthak's academic background in BTech + MBA from NMIMS Indore, coupled with his passion for coding and entrepreneurship, equips him with the insights needed to navigate the complexities of the modern business landscape. Under his guidance, Mittal Alliance aims to connect a multitude of enterprises across sectors, driving synergy and efficiency while empowering businesses to thrive in an ever-evolving marketplace.`,
   },
 ];
