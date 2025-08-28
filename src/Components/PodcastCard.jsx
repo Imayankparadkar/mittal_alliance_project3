@@ -6,7 +6,7 @@ const PodcastCard = () => {
     const [podcasts] = useState([
         {
             image: "/Blog/blog 8.png",
-            name: "John Doe",
+            // name: "John Doe",
             date: "2025-07-15",
             podcastTitle: "Power of Networking in Business",
             pageContent:
@@ -16,7 +16,7 @@ const PodcastCard = () => {
         },
         {
             image: "/Blog/blog 6.png",
-            name: "Priya Sharma",
+            // name: "Priya Sharma",
             date: "2025-07-10",
             podcastTitle: "12 Proven Strategies for Accelerating Business Growth",
             pageContent:
@@ -26,7 +26,7 @@ const PodcastCard = () => {
         },
         {
             image: "/Blog/blog 10.png",
-            name: "Arjun Mehta",
+            // name: "Arjun Mehta",
             date: "2025-06-28",
             podcastTitle: "What Makes a Leader a Great Leader?",
             pageContent:
@@ -82,7 +82,7 @@ const PodcastCard = () => {
                                 {/* Author & Date */}
                                 <div className="flex justify-between text-xs mb-4">
                                     <div className="flex items-center gap-1 text-[#218F9A]">
-                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        {/* <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M12.0017 12.4574V11.2892C12.0017 10.6695 11.7555 10.0752 11.3174 9.63708C10.8792 9.19892 10.2849 8.95276 9.66527 8.95276H6.16064C5.54098 8.95276 4.94671 9.19892 4.50854 9.63708C4.07038 10.0752 3.82422 10.6695 3.82422 11.2892V12.4574"
@@ -92,7 +92,7 @@ const PodcastCard = () => {
                                                 d="M7.91357 6.61633C9.20394 6.61633 10.25 5.57027 10.25 4.2799C10.25 2.98953 9.20394 1.94348 7.91357 1.94348C6.6232 1.94348 5.57715 2.98953 5.57715 4.2799C5.57715 5.57027 6.6232 6.61633 7.91357 6.61633Z"
                                                 stroke="#218F9A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"
                                             />
-                                        </svg>
+                                        </svg> */}
                                         {service.name}
                                     </div>
                                     <div className="flex items-center gap-1 text-[#218F9A]">
