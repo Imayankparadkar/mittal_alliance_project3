@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // <-- 1. Import Link
+import { Link } from "react-router-dom";
 import PodcastCard from "../Components/PodcastCard";
 
 const Blog = () => {
@@ -42,16 +42,22 @@ const Blog = () => {
                     <PodcastCard />
                 </section>
 
-                <section className="w-full flex justify-center text-sm font-semibold items-center">
-                    {/* --- MODIFIED SECTION START --- */}
+                {/* --- MODIFIED SECTION START --- */}
+                <section className="w-full flex justify-center text-sm font-semibold items-center mt-8 px-4">
                     <Link
                         to="/blogs"
-                        className="border border-[#FDAA56] cursor-pointer text-[#FDAA56] py-2 px-4 rounded-full hover:bg-[#FDAA56] hover:text-black transition-colors duration-300"
+                        className="border border-[#FDAA56] cursor-pointer text-[#FDAA56] py-3 px-6 text-center rounded-full hover:bg-[#FDAA56] hover:text-black transition-colors duration-300"
                     >
-                        Visit My Blog and Learn More About Entrepreneurship
+                        {/* Short text for mobile */}
+                        <span className="sm:hidden">Visit My Blog and Learn More About Entrepreneurship</span>
+                        {/* Longer text for screens larger than mobile (sm and up) */}
+                        <span className="hidden sm:inline">
+                            Visit My Blog and Learn More About Entrepreneurship
+                        </span>
                     </Link>
-                    {/* --- MODIFIED SECTION END --- */}
                 </section>
+                {/* --- MODIFIED SECTION END --- */}
+
 
                 <div className="bg-black sm:py-1 px-4 sm:px-10 gap-6 absolute sm:mt-0 mt-4 right-0 mb-2 w-fit flex items-center justify-between ">
                     <img
